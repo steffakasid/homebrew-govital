@@ -5,15 +5,42 @@
 class Govital < Formula
   desc "Go dependency maintenance scanner"
   homepage "https://github.com/steffakasid/govital"
-  version "0.2"
+  version "0.3"
   license "Apache-2.0"
-  depends_on :linux
 
-  if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://github.com/steffakasid/govital/releases/download/0.2/govital_0.2_linux_amd64.tar.gz"
-    sha256 "e9b336b7210e7446da3d1c37d11f8f7f99a301d546222930140996744f638aad"
-    def install
-      bin.install "govital"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/govital/releases/download/0.3/govital_0.3_darwin_amd64.tar.gz"
+      sha256 "75417450db191a9aebabf2a155ad8a3fb4ef2864137fd577cd251c5684f395fb"
+
+      def install
+        bin.install "govital"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/steffakasid/govital/releases/download/0.3/govital_0.3_darwin_arm64.tar.gz"
+      sha256 "7189fcdaa5409576fd5a0cb11dabca6afc2962819f930631ba5cc03c0889490b"
+
+      def install
+        bin.install "govital"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/steffakasid/govital/releases/download/0.3/govital_0.3_linux_amd64.tar.gz"
+      sha256 "660f6c1e1eb98f6819ea3628bbb64d1b3ea122b3c2899cfcf1fbea56de56d7eb"
+      def install
+        bin.install "govital"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/steffakasid/govital/releases/download/0.3/govital_0.3_linux_arm64.tar.gz"
+      sha256 "3b9489bddfc5ca32127b6aa3572229f07cdc2bdf2ccc2adb7da736dbacb891bb"
+      def install
+        bin.install "govital"
+      end
     end
   end
 end
