@@ -5,21 +5,21 @@
 class Govital < Formula
   desc "Go dependency maintenance scanner"
   homepage "https://github.com/steffakasid/govital"
-  version "0.5"
+  version "0.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/govital/releases/download/0.5/govital_0.5_darwin_amd64.tar.gz"
-      sha256 "d7c234bb15be1230a988fec18cf957d6572c04289d638819dc998614811ac900"
+      url "https://github.com/steffakasid/govital/releases/download/0.6/govital_0.6_darwin_amd64.tar.gz"
+      sha256 "5e3330029ca69d46f8135bb023cbbf4ee7bbc3576b090bb488a21e47bef90fc7"
 
       def install
         bin.install "govital"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/govital/releases/download/0.5/govital_0.5_darwin_arm64.tar.gz"
-      sha256 "d69e1923e1428bed42109419c14d6da80b3484b1b20ec2163376378ee5f2c588"
+      url "https://github.com/steffakasid/govital/releases/download/0.6/govital_0.6_darwin_arm64.tar.gz"
+      sha256 "be075afa12a3a7858689e382c10d27fb9a7f7cc58be26c38344dc89d5f8c9413"
 
       def install
         bin.install "govital"
@@ -29,15 +29,15 @@ class Govital < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/govital/releases/download/0.5/govital_0.5_linux_amd64.tar.gz"
-      sha256 "ca9a81f2dc08c6cb7219d3a7a276b66717a55cf65b2335c7e5f34dafddc31b01"
+      url "https://github.com/steffakasid/govital/releases/download/0.6/govital_0.6_linux_amd64.tar.gz"
+      sha256 "b198246ff46b97dbe1f9ef6cd12337585d4bd31af061b5b093156faee49b9fc0"
       def install
         bin.install "govital"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/govital/releases/download/0.5/govital_0.5_linux_arm64.tar.gz"
-      sha256 "de6dcd968d3cdc64bb023e8b0dd4180d91bb40f5a81625d4b232bd8bb92ce82b"
+      url "https://github.com/steffakasid/govital/releases/download/0.6/govital_0.6_linux_arm64.tar.gz"
+      sha256 "0997dd03a828767784ac09f0a021826ec1ddcb6182cbbe48aee6820ee959da31"
       def install
         bin.install "govital"
       end
