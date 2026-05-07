@@ -7,6 +7,7 @@ class Govital < Formula
   homepage "https://github.com/steffakasid/govital"
   version "1.0.1"
   license "Apache-2.0"
+  deprecate! date: "2026-05-07", because: "use steffakasid/tap/govital instead"
 
   on_macos do
     on_intel do
