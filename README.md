@@ -1,18 +1,13 @@
-# Steffakasid Govital
+# DEPRECATED: steffakasid/homebrew-govital
 
-## How do I install these formulae?
+This tap is deprecated.
 
-`brew install steffakasid/govital/<formula>`
+Use the consolidated tap instead:
 
-Or `brew tap steffakasid/govital` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "steffakasid/govital"
-brew "<formula>"
+```bash
+brew tap steffakasid/tap
+brew install steffakasid/tap/govital
 ```
 
-## Documentation
-
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+For full installation instructions, see the consolidated tap README:
+https://github.com/steffakasid/homebrew-tap
